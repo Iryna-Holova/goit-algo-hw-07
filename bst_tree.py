@@ -228,6 +228,32 @@ class BinarySearchTree():
             self.pre_order_traversal(node.left_child, path)
             self.pre_order_traversal(node.right_child, path)
 
+    def get_sum(self):
+        """
+        Get the sum of all the nodes in the binary search tree.
+
+        Returns:
+            int: The sum of all the nodes in the binary search tree.
+        """
+        if self.root:
+            return self.get_sum_of_nodes(self.root)
+        return 0
+
+    def get_sum_of_nodes(self, node):
+        """
+        Get the sum of all the nodes in the binary search tree.
+
+        Args:
+            node (Node): The node to start the traversal from.
+
+        Returns:
+            int: The sum of all the nodes in the binary search tree.
+        """
+        if node is None:
+            return 0
+        return (node.data + self.get_sum_of_nodes(node.left_child) +
+                self.get_sum_of_nodes(node.right_child))
+
     def search(self, data):
         """
         Search for a node with given data in the binary search tree.
@@ -273,9 +299,4 @@ if __name__ == '__main__':
 
     print("Min value:", bst.get_min_value())
     print("Max value:", bst.get_max_value())
-
-    pre_order_path = bst.traversal()
-    print("Pre-order traversal:", pre_order_path)
-
-    sum_nodes = sum(node.data for node in pre_order_path)
-    print("Sum of nodes:", sum_nodes)
+    print("Sum of all nodes:", bst.get_sum())

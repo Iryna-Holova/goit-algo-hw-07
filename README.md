@@ -60,7 +60,7 @@ print("Min value:", min_value)  # Output: Min value: 1
 
 **Objective**: Implement a function to calculate the sum of all values in the BST.
 
-This task uses a pre-order traversal to accumulate all node values in the tree. After traversing the tree with the `traversal` method, the sum is calculated by iterating over the resulting nodes.
+This task uses a recursion to accumulate sum of all node values in the tree. Method `get_sum` performs recursive method `get_sum_of_nodes` and returns the result.
 
 ### Code Example
 
@@ -75,9 +75,8 @@ bst.insert(3)
 bst.insert(2)
 bst.insert(4)
 bst.insert(1)
-pre_order_path = bst.traversal()
-sum_nodes = sum(node.data for node in pre_order_path)
-print("Sum of nodes:", sum_nodes)  # Output: Sum of nodes: 64
+sum_nodes = bst.get_sum()
+print("Sum of all nodes:", sum_nodes)  # Output: Sum of all nodes: 64
 ```
 
 ## Task 4: Hierarchical Comment System
