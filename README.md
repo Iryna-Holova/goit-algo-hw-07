@@ -2,7 +2,7 @@
 
 This repository contains several completed tasks focused on binary search trees (BST) and a hierarchical comment system. Each task includes core implementations, specific operations, and insights into the structure and algorithmic choices.
 
-Table of Contents
+## Table of Contents
 
 - [Task 1: Find Maximum Value in BST](#task-1-find-maximum-value-in-bst)
 - [Task 2: Find Minimum Value in BST](#task-2-find-minimum-value-in-bst)
