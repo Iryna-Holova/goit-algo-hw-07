@@ -123,7 +123,7 @@ John: What a wonderful book!
 ### Tasks 1-3 (Binary Search Tree) [See code](./bst_tree.py)
 
 - **Efficiency**: Each operation takes advantage of the binary search property, providing efficient `O(log n)` traversal for both finding minimum/maximum values and summing nodes.
-- **Tree Structure**: The pre-order traversal used in Task 3 can be replaced with other traversal orders depending on specific needs for accumulating data.
+- **Tree Structure**: The recursive `get_sum_of_nodes` method used in Task 3 can be replaced with `traversal` method followed by computing a sum of result path depending on specific needs for accumulating data.
 
 ### Task 4 (Comment System) [See code](./comments.py)
 
